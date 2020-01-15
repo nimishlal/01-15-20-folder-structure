@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CartService } from 'src/app/shared/services/cart.service';
 
 @Component({
   selector: 'app-landing',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingComponent implements OnInit {
 
-  constructor() { }
+  constructor(private cardService: CartService) { }
 
   ngOnInit() {
   }
@@ -16,4 +17,7 @@ export class LandingComponent implements OnInit {
     alert('Testing');
   }
 
+  reset() {
+    this.cardService.resetCount();
+  }
 }

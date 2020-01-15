@@ -1,1 +1,6 @@
-<app-button btnLabel="Submit" (clickButton)= "onClick()" btnClass="btn-dark"></app-button>
+<app-button btnLabel="Submit" (clickButton)= "onClick()" btnClass= "btn-dark"></app-button>
+<div class="container-fluid">
+    <app-card-count></app-card-count>
+    <app-card-list></app-card-list>
+    <app-button btnLabel="Reset Count" btnClass= "btn-dark" (clickButton)="reset()"></app-button>
+</div>
